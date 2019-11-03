@@ -1,7 +1,7 @@
 ﻿using Avalonia;
 using Avalonia.Markup.Xaml;
 
-namespace FileManager.UI
+namespace FileManagement.UI
 {
     public class App : Application
     {

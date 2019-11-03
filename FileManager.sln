@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29411.108
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C1D96FF2-A0F4-4B74-8138-86510E01F163}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileManager.UI", "src\FileManager.UI\FileManager.UI.csproj", "{4BEA3EA9-F308-4E1E-872D-6A0FEE46705E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileManagement.UI", "src\FileManagement.UI\FileManagement.UI.csproj", "{4BEA3EA9-F308-4E1E-872D-6A0FEE46705E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileManagement.Domain", "src\FileManagement.Domain\FileManagement.Domain.csproj", "{0B1F80BB-3CEA-4F8F-85BE-305E84291BE0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +19,17 @@ Global
 		{4BEA3EA9-F308-4E1E-872D-6A0FEE46705E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4BEA3EA9-F308-4E1E-872D-6A0FEE46705E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4BEA3EA9-F308-4E1E-872D-6A0FEE46705E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B1F80BB-3CEA-4F8F-85BE-305E84291BE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B1F80BB-3CEA-4F8F-85BE-305E84291BE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B1F80BB-3CEA-4F8F-85BE-305E84291BE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B1F80BB-3CEA-4F8F-85BE-305E84291BE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{4BEA3EA9-F308-4E1E-872D-6A0FEE46705E} = {C1D96FF2-A0F4-4B74-8138-86510E01F163}
+		{0B1F80BB-3CEA-4F8F-85BE-305E84291BE0} = {C1D96FF2-A0F4-4B74-8138-86510E01F163}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F449E30B-7D29-4013-B29E-721365BE79A9}
