@@ -1,5 +1,6 @@
 ﻿using System;
 using Avalonia;
+using Avalonia.Controls;
 using Avalonia.Logging.Serilog;
 using FileManagement.UI.ViewModels;
 using FileManagement.UI.Views;
@@ -14,7 +15,8 @@ namespace FileManagement.UI
             => AppBuilder.Configure<App>()
                 .UsePlatformDetect()
                 .LogToDebug()
-                .UseReactiveUI();
+                .UseReactiveUI()
+                .UseDataGrid();
 
         private static void AppMain(Application app, string[] args)
         {

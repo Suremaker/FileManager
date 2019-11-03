@@ -7,7 +7,7 @@
   <Border BorderThickness="1" CornerRadius="5" Padding="1">
     <DockPanel>
       <TextBox IsReadOnly="True" Text="{Binding Path}" DockPanel.Dock="Top" Margin="0 0 0 1"/>
-      <ListBox Items="{Binding Entries}"/>
+      <DataGrid AutoGenerateColumns="True" Items="{Binding Entries}"/>
     </DockPanel>
   </Border>
 </UserControl>
