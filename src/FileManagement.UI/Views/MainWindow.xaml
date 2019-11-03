@@ -7,8 +7,6 @@
         x:Class="FileManagement.UI.Views.MainWindow"
         Title="FileManagement.UI" Content="{Binding Panel}"
         WindowState="Maximized"
-        MinWidth="400" MinHeight="300">
-  <Design.DataContext>
-    <vm:MainWindowViewModel/>
-  </Design.DataContext>
+        MinWidth="400" MinHeight="300"
+        d:DataContext="{x:Static vm:DesignFakes.MainWindow}">
 </Window>

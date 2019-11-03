@@ -1,12 +1,19 @@
 ﻿using System.Collections.Generic;
-using System.Xml.Serialization;
-using ReactiveUI;
+using FileManagement.Domain;
+using FileManagement.Domain.FileSystem;
 
 namespace FileManagement.UI.ViewModels
 {
     public class DirectoryPanelViewModel : ViewModelBase
     {
-        public string Path { get; } = "Some path";
-        public IEnumerable<string> Entries { get; } = new[] {"file.txt", "dir"};
+        private readonly IDirectoryNavigator _navigator;
+
+        public DirectoryPanelViewModel(IDirectoryNavigator directoryNavigator)
+        {
+            _navigator = directoryNavigator;
+        }
+
+        public string Path  => _navigator.Path;
+        public IEnumerable<DirectoryEntry> Entries => _navigator.Entries;
     }
 }

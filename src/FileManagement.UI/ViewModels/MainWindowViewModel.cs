@@ -1,12 +1,14 @@
-﻿namespace FileManagement.UI.ViewModels
+﻿using FileManagement.Domain;
+
+namespace FileManagement.UI.ViewModels
 {
     public class MainWindowViewModel : ViewModelBase
     {
         public DirectoryPanelViewModel Panel { get; }
 
-        public MainWindowViewModel()
+        public MainWindowViewModel(IDirectoryNavigator directoryNavigator)
         {
-            Panel = new DirectoryPanelViewModel();
+            Panel = new DirectoryPanelViewModel(directoryNavigator);
         }
     }
 }

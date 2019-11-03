@@ -1,7 +1,6 @@
-﻿using System;
-using Avalonia;
-using Avalonia.Controls;
+﻿using Avalonia;
 using Avalonia.Logging.Serilog;
+using FileManagement.Domain;
 using FileManagement.UI.ViewModels;
 using FileManagement.UI.Views;
 
@@ -20,7 +19,16 @@ namespace FileManagement.UI
 
         private static void AppMain(Application app, string[] args)
         {
-            app.Run(new MainWindow { DataContext = new MainWindowViewModel() });
+            app.Run(new MainWindow { DataContext = InitializeModel() });
+        }
+
+        private static MainWindowViewModel InitializeModel()
+        {
+            var fileManager = new FileManager();
+            var navigator = new DirectoryNavigator(fileManager);
+            navigator.Cd(fileManager.GetCurrentDirectory());
+
+            return new MainWindowViewModel(navigator);
         }
     }
 }
