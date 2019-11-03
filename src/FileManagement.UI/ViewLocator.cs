@@ -7,11 +7,12 @@ namespace FileManagement.UI
 {
     public class ViewLocator : IDataTemplate
     {
+        private static readonly string Namespace = typeof(ViewLocator).Namespace + ".Views.";
         public bool SupportsRecycling => false;
 
         public IControl Build(object data)
         {
-            var name = data.GetType().FullName.Replace("ViewModel", "View");
+            var name = $"{Namespace}{data.GetType().Name.Replace("ViewModel","")}";
             var type = Type.GetType(name);
 
             if (type != null)

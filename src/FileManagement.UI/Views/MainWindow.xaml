@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
         x:Class="FileManagement.UI.Views.MainWindow"
-        Title="FileManagement.UI">
-    <Design.DataContext>
-        <vm:MainWindowViewModel/>
-    </Design.DataContext>
+        Title="FileManagement.UI" Content="{Binding Panel}"
+        WindowState="Maximized"
+        MinWidth="400" MinHeight="300">
+  <Design.DataContext>
+    <vm:MainWindowViewModel/>
+  </Design.DataContext>
 </Window>
