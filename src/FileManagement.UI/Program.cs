@@ -1,8 +1,10 @@
 ﻿using System;
 using Avalonia;
 using Avalonia.Logging.Serilog;
+using FileManagement.UI.ViewModels;
+using FileManagement.UI.Views;
 
-namespace FileManager.UI
+namespace FileManagement.UI
 {
     class Program
     {
@@ -11,11 +13,12 @@ namespace FileManager.UI
         public static AppBuilder BuildAvaloniaApp()
             => AppBuilder.Configure<App>()
                 .UsePlatformDetect()
-                .LogToDebug();
+                .LogToDebug()
+                .UseReactiveUI();
 
         private static void AppMain(Application app, string[] args)
         {
-            app.Run(new MainWindow());
+            app.Run(new MainWindow { DataContext = new MainWindowViewModel() });
         }
     }
 }

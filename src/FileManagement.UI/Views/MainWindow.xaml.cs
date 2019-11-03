@@ -2,7 +2,7 @@
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace FileManager.UI
+namespace FileManagement.UI.Views
 {
     public class MainWindow : Window
     {
