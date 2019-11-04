@@ -10,11 +10,14 @@
   <Border BorderThickness="1" CornerRadius="5" Padding="1">
     <DockPanel>
       <TextBox IsReadOnly="True" Text="{Binding Path}" DockPanel.Dock="Top" Margin="0 0 0 1"/>
-      <DataGrid Items="{Binding Entries}" CanUserResizeColumns="True" CanUserSortColumns="True" >
+      <DataGrid Items="{Binding Entries}" CanUserResizeColumns="True" CanUserSortColumns="True" Name="grid">
         <DataGrid.Columns>
           <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
           <DataGridTextColumn Header="Type" Binding="{Binding Type}" />
         </DataGrid.Columns>
+        <DataGrid.KeyBindings>
+          <KeyBinding Gesture="Enter" Command="{Binding OnEnter}" CommandParameter="{Binding #grid.SelectedItem}"/>
+        </DataGrid.KeyBindings>
       </DataGrid>
     </DockPanel>
   </Border>

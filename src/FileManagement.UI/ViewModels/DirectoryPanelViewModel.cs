@@ -15,5 +15,10 @@ namespace FileManagement.UI.ViewModels
 
         public string Path  => _navigator.Path;
         public IEnumerable<DirectoryEntry> Entries => _navigator.Entries;
+
+        public void OnEnter(DirectoryEntry entry)
+        {
+
+        }
     }
 }
